@@ -55,7 +55,7 @@ stdRp = sqrt(sum((Rp.-meanRp).^2) / 9);
 stdRi = sqrt(sum((Ri.-meanRi).^2) / 9);
 
 % Objective function
-track_error = (W1)' * V * (W1);   % sigma square
+volatility = (W1)' * V * (W1);   % sigma square
 
 Zxp = (Rp.-meanRp)/stdRp;
 Zxi = (Ri.-meanRi)/stdRi;
@@ -64,5 +64,5 @@ Zf = Zxp .* Zxi;
 roh = sum(Zf)/9;
 
 % Tracking error in %
-Tracking_err = sqrt(track_error) * sqrt(1-roh^2) / 10  % Sigma
+Tracking_err = sqrt(volatility) * sqrt(1-roh^2) / 10  % Sigma
 %printf(Tracking_err);
