@@ -1,3 +1,4 @@
+% Optimises tracking error to get minimum value using Lagrange's Multiplier Method
 
 W = [8.24; 14.75; 2.14; 20.21; 19.35; 4.85; 15.43; 2.64; 3.94; 8.46];
 Rp = [36.74; 20.58; 25.89; 36.24; 34.36; 29.67; 27.28; 18.45; 8.49; 10.02];
