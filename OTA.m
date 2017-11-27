@@ -52,7 +52,9 @@ M = [B, A; A, C];
 lambda = zeros(2, 1);
 lambda = inv(M) * [Rp1; 1];
 
+
 W1 = inv(V)*(Rp*lambda(1, 1) + I*lambda(2, 1))
+
 
 meanRp = sum(Rp)/10;
 meanRi = sum(Ri)/10;
