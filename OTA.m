@@ -59,11 +59,14 @@ W1 = inv(V)*(Rp*lambda(1, 1) + I*lambda(2, 1))
 meanRp = sum(Rp)/10;
 meanRi = sum(Ri)/10;
 
+
 stdRp = sqrt(sum((Rp.-meanRp).^2) / 9);
 stdRi = sqrt(sum((Ri.-meanRi).^2) / 9);
 
+
 % Objective function
 volatility = (W1)' * V * (W1);   % sigma square
+
 
 Zxp = (Rp.-meanRp)/stdRp;
 Zxi = (Ri.-meanRi)/stdRi;
