@@ -29,6 +29,7 @@ for i = 1:10
       xbar = sum(r(i,:)) / 10;
       V(i, j) = sum((r(i,:).-xbar).^2) / 10 ;
 
+
     else
       xbar = sum(r(i,:)) / 10;
       ybar = sum(r(j,:)) / 10;
@@ -71,9 +72,10 @@ volatility = (W1)' * V * (W1);   % sigma square
 Zxp = (Rp.-meanRp)/stdRp;
 Zxi = (Ri.-meanRi)/stdRi;
 
+
 Zf = Zxp .* Zxi;
 roh = sum(Zf)/9;
 
+
 % Tracking error in %
 Tracking_err = sqrt(volatility) * sqrt(1-roh^2) / 10  % Sigma
-%printf(Tracking_err);
